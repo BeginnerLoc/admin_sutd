@@ -40,7 +40,7 @@ const Create = () => {
 
   useEffect(() => {
     // Fetch the API data
-    axios.get('http://localhost:8000/api/admin/get_all_questions')
+    axios.get('https://sutd-bot-server.azurewebsites.net/api/admin/get_all_questions')
       .then(response => {
         // Extract the data from the response
         const responseData = response.data;
@@ -108,7 +108,7 @@ const Create = () => {
       key: 'action',
       render: (_, action) => (
         <Space size="middle">
-          <Button type='primary'>Adjust Deadline</Button>
+          <Button type='primary'>Edit</Button>
           <Button danger>Delete</Button>
         </Space>
       ),
@@ -220,6 +220,14 @@ const Create = () => {
             rules={[{ required: true, message: 'Please enter the question number.' }]}
           >
             <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="Question"
+            name="question"
+            rules={[{ required: true, message: 'Please enter the question.' }]}
+          >
+            <Input.TextArea rows={4} />
           </Form.Item>
 
           <Form.Item

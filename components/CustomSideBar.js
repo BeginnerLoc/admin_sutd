@@ -26,19 +26,8 @@ function CustomSideBar({ children }) {
         {
             key: '/create',
             icon: <PlusCircleOutlined />,
-            label: 'Create question',
-        },
-        {
-            key: '/option1',
-            icon: <VideoCameraOutlined />,
-            label: 'Option 2',
-
-        },
-        {
-            key: '/option2',
-            icon: <PlusCircleOutlined />,
-            label: 'Option 3',
-        },
+            label: 'Manager question',
+        }
     ];
 
     const [collapsed, setCollapsed] = useState(false)
